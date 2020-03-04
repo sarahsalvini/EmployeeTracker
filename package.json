@@ -1,0 +1,26 @@
+{
+  "name": "employeetracker",
+  "version": "1.0.0",
+  "description": "Employee Tracker Homework 12",
+  "main": "index.js",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^7.0.6",
+    "mysql": "^2.18.1",
+    "node": "^13.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahsalvini/EmployeeTracker.git"
+  },
+  "author": "Sarah Salvini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarahsalvini/EmployeeTracker/issues"
+  },
+  "homepage": "https://github.com/sarahsalvini/EmployeeTracker#readme"
+}

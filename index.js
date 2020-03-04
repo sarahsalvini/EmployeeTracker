@@ -83,3 +83,13 @@ function options() {
         }
       });
   }
+
+function viewAllEmployees(){
+    var query = "SELECT * FROM employee";
+    connection.query(query, { employee: answer.employee }, function(err, res) {
+        for (var i = 0; i < res.length; i++) {
+          console.log("ID: " + res[i].id + " || First Name: " + res[i].first_name + " || Last Name: " + res[i].last_name + " || Role ID: " + res[i].role_id + " || Manager ID: " + res[i].manager_id);
+        }
+        options();
+      });
+}
