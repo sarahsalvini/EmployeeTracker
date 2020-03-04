@@ -15,7 +15,7 @@ connection.connect(function(err) {
       console.log(err);
     }
     console.log("connection id", connection.threadId);
-    menu();
+    options();
   });
 
 
@@ -46,7 +46,7 @@ function options() {
           break;
   
         case "View All employees by deparment":
-          
+          employeesDepart();
           break;
   
         case "View all employees by manager":
@@ -85,11 +85,13 @@ function options() {
   }
 
 function viewAllEmployees(){
-    var query = "SELECT * FROM employee";
-    connection.query(query, { employee: answer.employee }, function(err, res) {
-        for (var i = 0; i < res.length; i++) {
-          console.log("ID: " + res[i].id + " || First Name: " + res[i].first_name + " || Last Name: " + res[i].last_name + " || Role ID: " + res[i].role_id + " || Manager ID: " + res[i].manager_id);
-        }
-        options();
-      });
-}
+    var query = `SELECT employee.id, employee.first_name, employee.last_name, role.title, department.name AS department, role.salary, CONCAT(manager.first_name, ' ', manager.last_name) AS manager `
+    query += "FROM employee LEFT JOIN role ON employee.role_id = role.id ";
+    query += "LEFT JOIN department ON department.id = role.department_id ";
+    query += "LEFT JOIN employee AS manager ON manager.id = employee.manager_id";
+    connection.query(query, function(err, res) {
+        if (err) throw err;
+        console.table(res)
+            options()
+        })
+    }
