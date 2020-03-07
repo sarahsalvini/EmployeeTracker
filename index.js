@@ -188,7 +188,7 @@ function upEmployRole(){
                         role_id: answer.roleID
                     },
                     {
-                        id: chosenItem.id
+                        id: answer.id
                     }
                 ],
                 function(err, ) {
@@ -238,13 +238,13 @@ function addEmploy() {
     } else if (answer.role === "Lawyer") {
         var roleid = "11"
     };
-    if (answer.man === "Ashley Rodriguez") {
+    if (answer.man === "Emma Smith") {
         var manid = "3"
-    } else if (answer.man === "John Doe") {
+    } else if (answer.man === "Bobby Hayes") {
         var manid = "1"
-    } else if (answer.man === "Sarah Lourd") {
+    } else if (answer.man === "Lisa Brown") {
         var manid = "6"
-    } else if (answer.man === "Mike Chan") {
+    } else if (answer.man === "Sarah Salvini") {
         var manid = "2"
     }
     connection.query(
