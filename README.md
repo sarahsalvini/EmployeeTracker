@@ -15,9 +15,9 @@ Developers are often tasked with creating interfaces that make it easy for non-d
 
 
 ## Deployed application:
-   <!-- [GitHub Deploy](https://sarahsalvini.github.io/Note-taker/) -->
+   [GitHub Deploy](https://sarahsalvini.github.io/EmployeeTracker/)
 
-   <!-- [Heroku Deploy](https://note-taker-hw-11.herokuapp.com/) -->
+   ![Gif](HW12.gif)
 
 &nbsp;
 
